@@ -80,25 +80,25 @@ It demonstrates positive and negative test scenarios, clean code design with **P
 
 ## Test Coverage
 The framework covers login functionality for SauceDemo:
-- Successful login with valid credentials
-- Failed login with invalid credentials
-- Locked-out user login
-- Empty credentials validation
+- ✅ Successful login with valid credentials
+- ✅ Failed login with invalid credentials
+- ✅ Locked-out user login
+- ✅ Empty credentials validation
+- ✅ Password empty validation
 
 ---
 
 ## Design Decisions
-The framework covers login functionality for SauceDemo:
+
 - **Page Object Model (POM):** Encapsulates selectors and actions for maintainable code
-- **Custom Commands:** cy.login() reusable login workflow
-- **Fixtures:** Centralised test data for easy updates and scalability
-- **TypeScript:** Provides type safety and cleaner code
-- **Cypress + Mochawesome:** Fast and reliable testing with clear reporting
+- **Custom Commands (`cy.login()`):** Reusable login workflow reduces duplication
+- **Fixtures:** Centralised test data improves maintainability and scalability
+- **TypeScript:** Provides type safety, IntelliSense, and cleaner code
+- **Cypress + Mochawesome:** Fast and reliable testing with structured reporting
 
 ---
 
 ## Future Enhancements
-The framework covers login functionality for SauceDemo:
 - CI/CD integration (GitHub Actions or Jenkins)
 - Environment-based configuration for different URLs or credentials
 - API-driven test setup for backend validation
