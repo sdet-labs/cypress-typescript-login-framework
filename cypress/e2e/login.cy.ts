@@ -28,4 +28,15 @@ describe('Login Functionality', () => {
       .should('contain.text', 'Username and password do not match');
   });
 
+  it('should not allow login for locked out user', function () {
+    loginPage.login(
+      this.users.lockedUser.username,
+      this.users.lockedUser.password
+    );
+  
+    loginPage.errorMessage()
+      .should('contain.text', 'Sorry, this user has been locked out');
+  });
+
+
 });
