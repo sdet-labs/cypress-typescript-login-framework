@@ -38,5 +38,21 @@ describe('Login Functionality', () => {
       .should('contain.text', 'Sorry, this user has been locked out');
   });
 
+  it('should show validation error when username and password are empty', () => {
+    cy.get('#login-button').click();
+
+    cy.get('[data-test="error"]')
+      .should('be.visible')
+      .and('contain.text', 'Username is required');
+  });
+
+  it('should show validation error when password is empty', function () {
+    cy.get('#user-name').type(this.users.validUser.username);
+    cy.get('#login-button').click();
+  
+    cy.get('[data-test="error"]')
+      .should('contain.text', 'Password is required');
+  });
+
 
 });
